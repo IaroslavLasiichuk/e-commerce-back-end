@@ -12,8 +12,8 @@ Category.init(
       autoIncrement: true,
     },
       category_name: {
-      type: DataTypes.UUID,
-      defaultValue: UUIDV4,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
