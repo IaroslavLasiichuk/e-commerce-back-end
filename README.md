@@ -1,155 +1,72 @@
-# E-commerce Back End Starter Code
-## User Story
+# E-commerce Back-End
 
-AS A manager at an internet retail company
-I WANT a back end for my e-commerce website that uses the latest technologies
-SO THAT my company can compete with other e-commerce companies
+## Description
+This is a back-end application for an e-commerce website built using the latest technologies, such as Express.js, MySQL2, and Sequelize, to help an internet retail company compete with other e-commerce companies. This application provides various routes for performing CRUD (Create, Read, Update, and Delete) operations on the Category, Product, and Tag models.
 
-## Acceptance Criteria
-* GIVEN a functional Express.js API
-* WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
-* THEN I am able to connect to a database using Sequelize
-* WHEN I enter schema and seed commands
-* THEN a development database is created and is seeded with test data
-* WHEN I enter the command to invoke the application
-* THEN my server is started and the Sequelize models are synced to the MySQL database
-* WHEN I open API GET routes in Insomnia Core for categories, products, or tags
-* THEN the data for each of these routes is displayed in a formatted JSON
-* WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
-*THEN I am able to successfully create, update, and delete data in my database
+## Link
+Link to walkthrough video that demonstrates the functionality of the README generator.
+> https://d____________________
 
-## Getting Started
-You’ll need to use the MySQL2Links to an external site. and SequelizeLinks to an external site. packages to connect your Express.js API to a MySQL database and the dotenv packageLinks to an external site. to use environment variables to store sensitive data, like your MySQL username, password, and database name.
+## Table of Contents
 
-Use the schema.sql file in the db folder to create your database using MySQL shell commands. Use environment variables to store sensitive data, like your MySQL username, password, and database name.
+* [Installation](#installation)
+* [Usage](#usage)
+* [Technologies](#technologies)
+* [Mock up](#mockup)
+* [Contributing](#contributing)
+* [Questions](#questions)
 
-## Database Models
-Your database should contain the following four models, including the requirements listed for each model:
+## Installation
 
-> Category
+To install the application, you need to clone this repository to your local machine, navigate to the root directory of the application, and run the following command in the terminal to install the required dependencies:
+    
+     npm install
 
- id
+# Usage 
+To use the application, you need to perform the following steps:
 
-Integer
+1. Create a .env file in the root directory of the application and add your MySQL database name, username, and password as follows: 
 
-Doesn't allow null values
+       DB_NAME='your_database_name'
+       DB_USER='your_mysql_username'
+       DB_PW='your_mysql_password'
 
-Set as primary key
+2. Create a database using the schema provided in the db folder. You can use the following command in the terminal to create the database:
 
-Uses auto increment
+       mysql -u your_mysql_username -p < db/schema.sql
 
-category_name
+3. Seed the database with test data using the following command:
 
-String
+       npm run seed
 
-Doesn't allow null values
+4. Start the server by running the following command:
 
-> Product
+       npm start
+5. Test the API routes using tools like Insomnia or Postman. 
 
-id
+## Technologies
+1. Javascript
+2. NodeJs
+3. Mysql
+4. Insomnia
+5. Nodemon
+6. Sequelize
+7. Dotenv
+8. Express
 
-Integer
+## Mock up
+![Screenshot_1](./Assets/13-orm-homework-demo-01.gif)
+![Screenshot_2](./Assets/13-orm-homework-demo-02.gif)
+![Screenshot_3](./Assets/13-orm-homework-demo-03.gif)
 
-Doesn't allow null values
+## Contributing
 
-Set as primary key
+Contributing
+Contributions are welcome! If you would like to contribute to this project, please fork the repository and submit a pull request.
 
-Uses auto increment
+## Questions
 
-product_name
+If you have any questions about this project, please feel free to reach out to me:
 
-String
-
-Doesn't allow null values
-
-price
-
-Decimal
-
-Doesn't allow null values
-
-Validates that the value is a decimal
-
-stock
-
-Integer
-
-Doesn't allow null values
-
-Set a default value of 10
-
-Validates that the value is numeric
-
-category_id
-
-Integer
-
-References the category model's id
-
-> Tag
-
-id
-
-Integer
-
-Doesn't allow null values
-
-Set as primary key
-
-Uses auto increment
-
-tag_name
-
-String
-
-> ProductTag
-
-id
-
-Integer
-
-Doesn't allow null values
-
-Set as primary key
-
-Uses auto increment
-
-product_id
-
-Integer
-
-References the product model's id
-
-tag_id
-
-Integer
-
-References the tag model's id
-
-## Associations
-You'll need to execute association methods on your Sequelize models to create the following relationships between them:
-
-Product belongs to Category, as a category can have multiple products but a product can only belong to one category.
-
-Category has many Product models.
-
-Product belongs to many Tag models. Using the ProductTag through model, allow products to have multiple tags and tags to have many products.
-
-Tag belongs to many Product models.
-
-Make sure you set up foreign key relationships that match the column we created in the respective models.
-
-## Fill Out the API Routes to Perform RESTful CRUD Operations
-Fill out the unfinished routes in product-routes.js, tag-routes.js, and category-routes.js to perform create, read, update, and delete operations using your Sequelize models.
-
-NOTE
-The functionality for creating the many-to-many relationship for products is already done for you.
-
-HINT
-Be sure to look at your module project's code for syntax help and use your model's column definitions to figure out what req.body will be for POST and PUT routes!
-
-## Seed the Database
-After creating the models and routes, run npm run seed to seed data to your database so that you can test your routes.
-
-## Sync Sequelize to the Database on Server Start
-Create the code needed in server.js to sync the Sequelize models to the MySQL database on server start.
+GitHub: https://github.com/iaroslavlasiichuk 
+Email: lasmant@yahoo.com    
