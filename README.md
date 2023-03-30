@@ -5,14 +5,14 @@ This is a back-end application for an e-commerce website built using the latest 
 
 ## Link
 Link to walkthrough video that demonstrates the functionality of the README generator.
-> https://d____________________
+> https://drive.google.com/file/d/1akLiwX9_bWpzxlWLvBCavF7TxliSsXoJ/view
 
 ## Table of Contents
 
 * [Installation](#installation)
 * [Usage](#usage)
 * [Technologies](#technologies)
-* [Mock up](#mockup)
+* [Mock up](#mock_up)
 * [Contributing](#contributing)
 * [Questions](#questions)
 
@@ -55,9 +55,9 @@ To use the application, you need to perform the following steps:
 8. Express
 
 ## Mock up
-![Screenshot_1](./Assets/13-orm-homework-demo-01.gif)
-![Screenshot_2](./Assets/13-orm-homework-demo-02.gif)
-![Screenshot_3](./Assets/13-orm-homework-demo-03.gif)
+![Screenshot_1](./Assets/category_screenshot.png)
+![Screenshot_2](./Assets/product_screenshot.png)
+![Screenshot_3](./Assets/tag_screenshot.png)
 
 ## Contributing
 
